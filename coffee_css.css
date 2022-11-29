@@ -1,0 +1,302 @@
+html {
+    box-sizing: border-box;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  body{
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /*-----GRID----*/
+  
+  #container {
+    display:grid; 
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: 1fr; 
+    grid-template-areas: 
+        'about'
+        'image'
+        'column1'
+        'column2' 
+        'column3';
+    background-color: white;
+}
+#image
+{
+    grid-area: image;
+}
+#item1 {
+    grid-area: about;
+    background-size: cover;
+    text-align: left;
+    color: rgb(57, 79, 94);
+    margin:0px 15px 0px 30px;
+    padding: 30px 0px 30px 0px;
+}
+.header {
+    font: bold 1.2em Times, serif;
+    text-transform: uppercase;
+    color: #B94531;
+    letter-spacing: .4em;
+}
+
+h2 {
+    font: bold 1em Times, serif;
+    text-transform: uppercase;
+    color: rgb(57, 79, 94);
+    letter-spacing: .2em;
+}
+  
+  #item2 {
+      grid-area: column1;
+      object-fit: cover;
+
+  }
+    .tile_text {
+        padding: 10px 0px;
+    }
+
+    
+  
+  #item3 {
+      grid-area: column2;
+      object-fit: cover;
+  }
+  #item4 {
+      grid-area: column3;
+      object-fit: cover;
+      
+  }
+  
+  footer {
+      background-color: rgb(57, 79, 94);
+      color: rgb(255, 248, 233);
+      text-align: center;
+      font-weight: bold;
+      padding: 10px;
+  }
+
+  
+  /*-----HERO IMAGE/HEADER-----*/
+/*HERO IMAGE FLEXIBLE - contain vs. cover*/
+  /*
+  .hero_image{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(images/coffee_shop.jpg);
+    height:500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    position: relative;
+    margin: 0 auto;
+}
+  */
+  .hero_image{
+      background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(images/coffee_shop.jpg);
+      height:500px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+  }
+  .hero_header {
+      text-align: left;
+      position: absolute;
+      color: white;
+      top:40%;
+      text-shadow: .05em .05em .1em black;
+      font-size: 3em;
+      margin: 20px;
+  }
+  
+  .hero_text {
+      text-align: left;
+      position: absolute;
+      color: white;
+      top:40%;
+      text-shadow: .05em .05em .1em black;
+      font-size: large;
+      padding: 60px 0px; 
+      margin: 20px;
+      display: none;
+      
+  }
+  
+  /*-----NAV-----*/
+  /* styles main-nav, list-style none - removes bullets
+  2 remove margin on main_nav and padding on li*/
+  
+  .main_nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: rgb(57, 79, 94);
+    padding: .3em;
+    margin: 0 auto;
+    
+}
+  /*style nav links*/
+  .main_nav a{
+      color: white;
+      padding: 60px 20px;
+      text-decoration: none;  
+      font-size: 12px;
+  }
+  /*let's add style to hover for our nav links*/
+  .main_nav a:hover {
+      background-color: white;
+      color: rgb(57, 79, 94)
+  }
+  /*push logo to left side*/
+  li.logo{
+      margin-left: auto;
+  }
+  
+  
+  /*-----COLUMNS-----*/
+  #item2,#item3,#item4 {
+    background: rgba(57, 79, 94, .3);
+    margin: 40px;
+    text-align: left;
+    color: rgb(57, 79, 94);
+}
+
+.tile_text, .tile_header {
+   padding: 0px 10px;
+}
+ 
+  /*-----IMAGES-----*/
+
+img {
+    max-width: 100%;
+}
+
+/*TABLET SIZE*/
+/*initial change*/
+
+/*tablets*/
+@media screen and (min-width: 450px) {
+    .main_nav a{
+    font-size: 10px;
+}
+}
+
+/*bring back two columns*/
+@media screen and (min-width: 600px) {
+    #container {
+        display:grid; 
+        grid-template-rows: auto auto auto ;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-areas: 
+            'about about'
+            'image image'
+            'column1 column2'
+           'column3 column3';
+        background-color: white;
+        max-width: 1200px;
+        margin: 0 auto;
+        }
+/*increase margins for about*/
+#item1 {
+        margin:0px 75px 0px 15px;
+    }
+
+/*style nav links - increase padding and font-size*/
+.main_nav a{
+    color: white;
+    padding: 60px 40px;
+    text-decoration: none;  
+    font-size: 14px;
+}
+/*display hero text */
+.hero_text {
+    text-align: left;
+    position: absolute;
+    color: white;
+    top:50%;
+    text-shadow: .05em .05em .1em black;
+    font-size: large;
+}
+}
+
+/*adding max width of 1200...need to do it to a few things*/
+/*bring up 3 columns*/
+@media screen and (min-width: 900px) {
+    #container {
+    display:grid; 
+    grid-template-rows: auto auto auto ;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-areas: 
+        'about about about'
+        'image image image'
+        'column1 column2 column3';
+    background-color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+
+.main_nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: rgb(57, 79, 94);
+    padding: .3em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero_image{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(images/coffee_shop.jpg);
+    height:500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+}
+
+/*style for menu*/
+/*declaration block example*/
+.menu_header {
+    color: #B94531;
+    font-family: serif;
+    padding: 0px 10px;
+
+}
+.favorite {
+    color: #B94531;
+}
+.menu_text {
+    
+    padding: 0px 10px;
+}
+/*example of child element
+em {
+    color: skyblue;
+}
+*/
+/*example of cascading effect - h1 will be goldenrod if this 
+style is used
+h1 {
+    color: goldenrod;
+}
+*/
+
+/*id selector*/
+
+
+
+
+/*class selector*/
+.price {
+    font-style: italic;
+}
+
+.favorite {
+    font-weight: bold;
+}
+

@@ -1,0 +1,40 @@
+/*universal selector example
+* {
+    border: 1px solid gray;
+}
+*/
+
+/*declaration block example*/
+h1, h2 {
+    color: darkblue;
+    font-family: serif;
+}
+p, dl {
+    color: darkred;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*example of child element
+em {
+    color: skyblue;
+}
+*/
+/*example of cascading effect - h1 will be goldenrod if this 
+style is used
+h1 {
+    color: goldenrod;
+}
+*/
+
+/*id selector*/
+#drinks {
+    background-color: blanchedalmond;
+}
+
+/*class selector*/
+.price {
+    font-style: italic;
+}
+
+.favorite {
+    font-weight: bold;
+}

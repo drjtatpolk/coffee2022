@@ -1,0 +1,111 @@
+<!DOCTYPE html >
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>The Coffee Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        @import url(coffee_css.css);
+    </style>
+</head>
+
+<body>
+    <!--copied my header/nav from my menu page and added my new link
+    using nav helps us mark up semantically-->
+        <header>
+            <nav>
+                <ul class="main_nav">
+                    
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li class="logo"><img src="images/coffee_shop_logo.png" alt="The Coffee Shop"></li>
+                </ul>
+                <div class="hero_image">
+                    <h1 class="hero_header">We are The Coffee Shop</h1>
+                    <p class="hero_text"> We offer beverages and food to get you through your day <br>
+                        and an atmosphere that will keep you coming back.</p>
+               </div>
+            </nav>
+        </header>
+
+        <main>
+        <div id="menu_grid">
+            <div id="intro">
+                <h1 class="header">
+                    The Coffee Shop Menu</h1>
+        
+                <p class="tile_text">Do you <em>love</em> coffee? Whether you are on the go or want a few moments to sit and relax, visit The Coffee Shop. 
+                    We have drinks, treats, sandwiches, and daily specials.</p>
+            </div>
+        
+            <div id="image">
+                  
+                <img src="images/coffee_shop.jpg" alt="the shop">
+            </div>
+            <div id="menu">
+                <div id="drinks">
+                    <h2 class="menu_header">Caffeinated Beverages</h2>
+                    <p>Need caffeine to start your day? Or to keep you going in the afternoon? We got you covered!</p>
+            
+                    <dl class="menu_text">
+                        <dt class="favorite">Iced Coffee &mdash; <strong>staff favorite!</strong> </dt>
+                        <dd>Insert <em>description</em> here <span class="price">$4.99</span></dd>
+            
+                        <dt>Hot Coffee</dt>
+                        <dd>Insert description here <span class="price">$2.99</span></dd>
+            
+                        <dt>Tea</dt>
+                        <dd>Insert description here <span class="price">$2.99</span></dd>
+            
+                        <dt class>Hot Chocolate</dt>
+                        <dd>Insert description here <span class="price">$3.99</span></dd>
+            
+                    </dl>
+                </div>
+            
+                <div id="treats">
+            
+                    <h2 class="menu_header"> Treats</h2>
+                    <p class="menu_text">Need something fun to go with your <em>favorite</em> caffinated beverage, 
+                        look no further! We have a variety of treats for you to enjoy.</p>
+            
+                    <dl class="menu_text">
+                        <dt>Poppy Seed Almond Cake</dt>
+                        <dd>Insert description here <span class="price">$3.99</span></dd>
+                            
+                        <dt class="favorite">Mocha Coffee Coffee Cake &mdash; 
+                            <strong>staff favorite!</strong> </dt>
+                        <dd>Insert description here <span class="price">$3.99</span></dd>
+                        
+                        <dt>Chocolate chocolate chip cookies</dt>
+                        <dd>Insert description here <span class="price">$1.99</span></dd>
+                    </dl>    
+                </div>
+            
+                <div id="healthy">
+            
+                    <h2 class="menu_header">Healthy Treats</h2>
+                    <p class="menu_text">Need a break from our Mocha Coffee Coffee Cake, try a healthy treat.</p>
+                        
+                    <dl class="menu_text">
+                        <dt>Fruit Cup</dt>
+                        <dd>Insert description here <span class="price">$2.99</span></dd>
+                                
+                        <dt class="favorite">Fruit Smoothie &mdash; <strong>staff favorite!</strong> </dt>
+                        <dd>Insert description here <span class="price">$3.99</span></dd>     
+                    </dl>      
+                </div>
+            </div>
+        </div>
+
+        
+        <p class="warning"><sup>*</sup> We are required to warn you that undercooked food is a health risk.</p>
+        </main>
+        <footer>
+                <p><small>All content copyright &copy; 2022, The Coffee Shop.</small></p>  
+        </footer>
+</body>
+</html>
